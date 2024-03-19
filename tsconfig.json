@@ -14,7 +14,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "nx-plugins": ["src/index.ts"]
+      "astro": ["packages/astro/src/index.ts"]
     }
   },
   "files": [],

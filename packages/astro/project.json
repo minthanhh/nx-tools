@@ -1,0 +1,51 @@
+{
+  "name": "astro",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/astro/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/astro",
+        "main": "packages/astro/src/index.ts",
+        "tsConfig": "packages/astro/tsconfig.lib.json",
+        "assets": [
+          "packages/astro/*.md",
+          {
+            "input": "./packages/astro/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/astro/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/astro",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/astro",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/astro/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

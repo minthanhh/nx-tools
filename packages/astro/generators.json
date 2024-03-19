@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "application": {
+      "factory": "./src/generators/application/generator#applicationGenerator",
+      "schema": "./src/generators/application/schema.json",
+      "description": "application generator"
+    },
+    "init": {
+      "factory": "./src/generators/init/generator#astroInitGenerator",
+      "schema": "./src/generators/init/schema.json",
+      "description": "init generator"
+    }
+  }
+}

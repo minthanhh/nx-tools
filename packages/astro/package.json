@@ -1,0 +1,24 @@
+{
+  "name": "@mithho/astro",
+  "version": "0.0.33",
+  "private": false,
+  "license": "MIT",
+  "author": "Ho Minh Thanh",
+  "dependencies": {
+    "@nx/devkit": "18.0.8",
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "generators": "./generators.json",
+  "executors": "./executors.json",
+  "exports": {
+    ".": "./index.js",
+    "./plugin": "./plugin.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

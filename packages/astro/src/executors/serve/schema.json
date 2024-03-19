@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "outputCapture": "pipe",
+  "cli": "nx",
+  "title": "Astro Serve",
+  "description": "Serve a Astro app.",
+  "type": "object",
+  "properties": {
+    "port": {
+      "type": "number",
+      "title": "Port",
+      "description": "Set PORT environment variable that can be used to serve the Astro application.",
+      "default": 4173
+    },
+    "silent": {
+      "type": "boolean",
+      "description": "Silent mode, disable logging.",
+      "default": false
+    },
+    "site": {
+      "type": "string",
+      "description": "URL of the deployed application."
+    },
+    "verbose": {
+      "type": "boolean",
+      "description": "Enable verbose logging.",
+      "default": false
+    },
+    "config": {
+      "type": "string",
+      "description": "Specify the path, relative to the project root, to the Astro config file."
+    },
+    "host": {
+      "type": "string",
+      "description": "Expose server on network."
+    }
+  },
+  "required": []
+}
